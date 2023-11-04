@@ -34,9 +34,6 @@ class ShipmentExportController
     /** @var EntityManager */
     private $entityManager;
 
-    /** @var FlashBagInterface */
-    private $flashBag;
-
     /** @var FactoryInterface */
     private $stateMachineFatory;
 
