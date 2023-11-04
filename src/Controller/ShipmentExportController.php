@@ -17,7 +17,6 @@ use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -59,7 +58,6 @@ class ShipmentExportController
     public function __construct(
         Environment $templatingEngine,
         EntityManager $entityManager,
-        FlashBagInterface $flashBag,
         FactoryInterface $stateMachineFatory,
         EventDispatcherInterface $eventDispatcher,
         RouterInterface $router,
@@ -70,7 +68,6 @@ class ShipmentExportController
     ) {
         $this->templatingEngine = $templatingEngine;
         $this->entityManager = $entityManager;
-        $this->flashBag = $flashBag;
         $this->stateMachineFatory = $stateMachineFatory;
         $this->eventDispatcher = $eventDispatcher;
         $this->router = $router;
